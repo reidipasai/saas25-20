@@ -1,1 +1,37 @@
-# saas25-20
+![statistics microservice](https://github.com/ntua/saas25-20/actions/workflows/statistics-backend-tests.yml/badge.svg)
+![credits microservice](https://github.com/ntua/saas25-20/actions/workflows/credits-backend-tests.yml/badge.svg)
+![xlsx parsing microservice](https://github.com/ntua/saas25-20/actions/workflows/xlsx_parsing-backend-tests.yml/badge.svg)
+![user management microservice](https://github.com/ntua/saas25-20/actions/workflows/user_management-tests.yml/badge.svg)
+![review microservice](https://github.com/ntua/saas25-20/actions/workflows/review-backend-tests.yml/badge.svg)
+![pre-commit](https://github.com/ntua/saas25-20/actions/workflows/pre-commit.yml/badge.svg)
+
+# ClearSKY Grading System
+<div align="center">
+    <img
+        src=https://github.com/ntua/saas25-20/blob/main/assets/clear_sky.png
+        alt="clearSKY"
+        width="300"
+    >
+</div>
+
+ClearSKY is a web application for courses/grading management by universities. It
+supports interactive student-professor reviews, multiple statistics per course,
+grading management for professors and much more. For the **full documentation**
+please visit our OpenAPI 3.0 documentation at `/docs` once you run the backend.
+
+
+## Manual Run
+To start the application manually, you can just run:
+`docker compose up --build`
+
+your application will be available at `http://localhost:8501`. Note that we use
+microservices as our backend architecture, each microservice is running on it's
+own port. For example, user management is running at 8001, credits at 8002,
+parsing at 8003, etc. You can see the documentation of each microservice at
+their corresponding port + `/docs`(i.e. `http://localhost:{PORT}/docs`).
+
+
+## For Developers
+
+Contributions are welcome! Please make sure to write tests for any new code and run them before submitting a pull request.
+If you find a bug, please open an issue describing how to duplicate it.
